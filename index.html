@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Edit Foto</title>
+    <style>
+      .filter {
+        display: flex;
+        justify-content: center;
+      }
+
+      .filter input {
+        margin-top: 20px;
+      }
+      .satu {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+      }
+      .dua {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+      }
+
+      .tiga {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .container img {
+        /* filter: blur(11px); */
+      }
+
+      /* Responsive */
+
+      @media screen and (max-width: 576px) {
+        .container {
+          width: 50%;
+          /* justify-content: center; */
+          /* text-align: center; */
+          /*
+          . align-items: center; */
+        }
+
+        .filter {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .filter img {
+          width: 150px;
+          height: 150px;
+        }
+
+        /* .satu {
+          flex-direction: row;
+          margin: 20px;
+        }
+
+        .dua {
+          flex-direction: row;
+          margin: 20px;
+        }
+
+        .tiga {
+          flex-direction: row;
+          margin: 20px;
+        } */
+        .container {
+          display: flex;
+          /* flex-direction: column; */
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Selamat Datang Di Aplikasi Edit Foto</h1>
+      <img src="img/gambar2.png" alt="gambar" />
+      <div class="filter">
+        <div class="satu">
+          <input type="range" min="0" max="15" name="sBlur" />
+          <label for="">Blur</label>
+          <input type="range" min="0" max="100" name="sGrayScale" />
+          <label for="">GrayScale</label>
+          <input type="range" min="100" max="1000" name="sBrightness" />
+          <label for="">Brightness</label>
+        </div>
+        <div class="dua">
+          <input type="range" name="sContrast" min="100" max="1000" />
+          <label for="">Contrast</label>
+          <input type="range" min="0" max="1000" name="sSaturate" />
+          <label for="">Saturate</label>
+          <input type="range" min="0" max="100" name="sSepia" />
+          <label for="">Sepia</label>
+        </div>
+
+        <div class="tiga">
+          <input type="range" min="1" max="10" name="sOpacity" />
+          <label for="">Opacity</label>
+          <input type="range" name="sInvert" />
+          <label for="">Invert</label>
+          <input type="range" min="0" max="100" name="sHue-Rotate" />
+          <label for="">Hue-Rotate</label>
+          <!-- <input type="range" name="sDropShadow" />
+          <label for="">Drop Shadow</label> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
