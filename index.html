@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aplikasi Edit Foto</title>
     <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: seashell;
+        padding-bottom: 1000px;
+      }
+
+      /* .editgambar {
+        width: 500px;
+        height: 500px;
+      } */
+
+      .editgambar img {
+        width: 150px;
+        height: 150px;
+        border: solid 2px red;
+        /* transition: all 1s; */
+      }
+      .editgambar img:hover {
+        /* border: solid 5px red; */
+      }
+
       .filter {
         display: flex;
         justify-content: center;
@@ -30,36 +53,26 @@
         flex-direction: column;
         margin: 20px;
       }
-      .container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      }
-
-      .container img {
-        /* filter: blur(11px); */
-      }
 
       /* Responsive */
 
       @media screen and (max-width: 576px) {
-        .container {
+        /* .container {
           width: 50%;
           /* justify-content: center; */
-          /* text-align: center; */
-          /*
+        /* text-align: center; */
+        /*
           . align-items: center; */
-        }
-
-        .filter {
+        /* } */
+        /* .filter {
           display: flex;
           flex-direction: column;
-        }
+        } */
 
-        .filter img {
+        /* .editfoto img {
           width: 150px;
           height: 150px;
-        }
+        } */
 
         /* .satu {
           flex-direction: row;
@@ -75,42 +88,52 @@
           flex-direction: row;
           margin: 20px;
         } */
-        .container {
+        /* .container {
           display: flex;
           /* flex-direction: column; */
-          width: 100%;
-        }
+        /* width: 100%;
+        } */
       }
     </style>
   </head>
   <body>
     <div class="container">
       <h1>Selamat Datang Di Aplikasi Edit Foto</h1>
-      <img src="img/gambar2.png" alt="gambar" />
+      <!-- Gambar -->
+      <div class="editgambar">
+        <img src="img/gambar2.png" alt="gambar" />
+        <br />
+        <form action="" enctype="multipart/form-data">
+          <input type="file" name="upload" />
+          <button type="submit" name="upload">Upload</button>
+        </form>
+      </div>
+      <!-- Akhir Gambar -->
+
       <div class="filter">
         <div class="satu">
-          <input type="range" min="0" max="15" name="sBlur" />
+          <input type="range" min="0" max="15" value="0" name="sBlur" />
           <label for="">Blur</label>
-          <input type="range" min="0" max="100" name="sGrayScale" />
+          <input type="range" min="0" max="100" value="0" name="sGrayScale" />
           <label for="">GrayScale</label>
-          <input type="range" min="100" max="1000" name="sBrightness" />
+          <input type="range" min="100" max="1000" value="100" name="sBrightness" />
           <label for="">Brightness</label>
         </div>
         <div class="dua">
-          <input type="range" name="sContrast" min="100" max="1000" />
+          <input type="range" name="sContrast" min="100" max="1000" value="100" />
           <label for="">Contrast</label>
-          <input type="range" min="0" max="1000" name="sSaturate" />
+          <input type="range" min="100" max="1000" value="100" name="sSaturate" />
           <label for="">Saturate</label>
-          <input type="range" min="0" max="100" name="sSepia" />
+          <input type="range" min="0" max="100" value="0" name="sSepia" />
           <label for="">Sepia</label>
         </div>
 
         <div class="tiga">
-          <input type="range" min="1" max="10" name="sOpacity" />
+          <input type="range" min="0" max="10" value="10" name="sOpacity" />
           <label for="">Opacity</label>
-          <input type="range" name="sInvert" />
+          <input type="range" name="sInvert" min="0" max="100" value="0" />
           <label for="">Invert</label>
-          <input type="range" min="0" max="100" name="sHue-Rotate" />
+          <input type="range" min="0" max="100" value="0" name="sHue-Rotate" />
           <label for="">Hue-Rotate</label>
           <!-- <input type="range" name="sDropShadow" />
           <label for="">Drop Shadow</label> -->
