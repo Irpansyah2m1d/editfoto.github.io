@@ -3,7 +3,7 @@ const sInputSlider = document.querySelectorAll(".filter input");
 
 const upload = document.querySelector(".editgambar input[name=upload]");
 
-console.log(upload.value);
+// console.log(upload.value);
 
 for (let i = 0; i < sInputSlider.length; i++) {
   // console.log(sInputSlider[i]);

@@ -7,11 +7,13 @@
     <title>Aplikasi Edit Foto</title>
     <style>
       .container {
+        width: 100%;
         display: flex;
         flex-direction: column;
         text-align: center;
         background-color: seashell;
         padding-bottom: 1000px;
+        position: fixed;
       }
 
       /* .editgambar {
@@ -57,41 +59,34 @@
       /* Responsive */
 
       @media screen and (max-width: 576px) {
-        /* .container {
-          width: 50%;
-          /* justify-content: center; */
-        /* text-align: center; */
-        /*
-          . align-items: center; */
-        /* } */
-        /* .filter {
+        .container {
+          width: 100%;
+        }
+        .filter {
           display: flex;
           flex-direction: column;
-        } */
-
-        /* .editfoto img {
+        }
+        .editfoto img {
           width: 150px;
           height: 150px;
-        } */
+        }
 
         /* .satu {
-          flex-direction: row;
-          margin: 20px;
+          display: flex;
+          flex-direction: column;
+          margin: 10px;
         }
 
         .dua {
-          flex-direction: row;
-          margin: 20px;
+          display: flex;
+          flex-direction: column;
+          margin: 10px;
         }
 
         .tiga {
-          flex-direction: row;
-          margin: 20px;
-        } */
-        /* .container {
           display: flex;
-          /* flex-direction: column; */
-        /* width: 100%;
+          flex-direction: column;
+          margin: 10px;
         } */
       }
     </style>
@@ -103,10 +98,10 @@
       <div class="editgambar">
         <img src="img/gambar2.png" alt="gambar" />
         <br />
-        <form action="" enctype="multipart/form-data">
+        <!-- <form action="" enctype="multipart/form-data">
           <input type="file" name="upload" />
           <button type="submit" name="upload">Upload</button>
-        </form>
+        </form> -->
       </div>
       <!-- Akhir Gambar -->
 
